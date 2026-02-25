@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    padding: 20 px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color : #333;
+}
+
+h1{
+    text-align:  center;
+    color: navy;
+}
+
+ul{
+    list-style: square ;
+}
+
+ol{
+    list-style: decimal;
+}
+
+img{
+    width: 250px;
+    border-radius: 50%;
+    border: 5px solid #3498db;
+}
+
+a{
+    color: blue;
+    text-decoration: none;
+}
+
+a:hover{
+    color: red;
+    text-decoration: underline;
+}
