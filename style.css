@@ -68,3 +68,27 @@ a:hover{
     box-shadow: 0 0 20px rgba(52, 152, 219, 0.5); /*Thêm bóng mờ khi hover*/
     transition: all 0.3s ease; /*Hiệu ứng chuyển đổi mượt mà*/
 }
+
+.skill-container{
+    display: flex;
+    flex-direction: row; /*nằm ngang*/
+    justify-content: center; /*căn giữa ngang*/
+    gap: 20px; /*khoảng cách giữa các ô*/
+    margin: 20px 0; /*khoảng cách trên dưới*/   
+    flex-wrap: wrap;
+
+}
+
+.skill{
+    height: 25px;
+    color: white;
+    gap: 20px;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #3498db;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight:  bold;
+    flex: 0 1 auto;
+    flex-wrap: wrap;
+}
