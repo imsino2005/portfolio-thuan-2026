@@ -49,8 +49,9 @@ a:hover{
 .avatar-side{
     flex: 0 0 auto; /*Don't allow the avatar to grow or shrink k co giãn*/
 }
-
 .avatar{
+    justify-content: center; /*Căn giữa nội dung trong avatar*/
+    margin: 40px 0x;
     width: 200px;
     height: 220px; 
     border-radius: 50%;
@@ -76,19 +77,20 @@ a:hover{
     gap: 20px; /*khoảng cách giữa các ô*/
     margin: 20px 0; /*khoảng cách trên dưới*/   
     flex-wrap: wrap;
+    margin-bottom: 40px;
 
 }
 
 .skill{
-    height: 25px;
-    color: white;
-    gap: 20px;
-    justify-content: center;
-    padding: 10px 20px;
-    background-color: #3498db;
-    border-radius: 8px;
-    font-size: 1.1em;
-    font-weight:  bold;
-    flex: 0 1 auto;
-    flex-wrap: wrap;
+    height: 40px;
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-align: center;
+  min-width: 100px;
 }
+
+
+

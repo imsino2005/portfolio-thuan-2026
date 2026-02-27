@@ -41,5 +41,54 @@ buttonDoiMau.addEventListener("click", function() {
         document.body.style.backgroundColor = "yellow";
         console.log("Lần thứ 7 thành vàng");
     }
-    
+});
+
+let isDarkMode = false;
+let buttonToggle = document.getElementById("togglemode");
+let clickCountDisplay = document.getElementById("clickCount");
+let SoLanClickToggle = 0;
+
+buttonToggle.addEventListener("click", function() {     
+    SoLanClickToggle++;
+    clickCountDisplay.textContent = "Số lần chuyển đổi mode : " + SoLanClickToggle;
+    isDarkMode = !isDarkMode;
+    if (isDarkMode) {
+        document.body.style.backgroundColor = "black";
+        document.body.style.color = "white";
+        console.log("Chế độ tối đã được bật");
+    } else {
+        document.body.style.backgroundColor = "white";
+        document.body.style.color = "black";
+        console.log("Chế độ sáng đã được bật");
+    }
+    alert("Bạn đã chuyển đổi chế độ " + (isDarkMode ? "tối" : "sáng") + "!");
+});
+
+let kyNang = ["HTML", "CSS", "Flexbox"];
+
+let danhsach= document.getElementById("kyNangList");
+
+
+function hienThiKyNang() {
+    danhsach.innerHTML = ""; // xoá nd cũ
+    kyNang.forEach(function(item) {
+        let li = document.createElement("li");
+        li.textContent = item;
+        danhsach.appendChild(li);
+    });
+}
+
+let buttonThemKyNang = document.getElementById("themkyNang");
+let input = document.getElementById("kyNangInput");
+buttonThemKyNang.addEventListener("click", function() {
+    let kyNangMoi = input.value.trim();  // Lấy giá trị từ input và loại bỏ khoảng trắng
+    if (kyNangMoi !== "") {  // Kiểm tra nếu không rỗng
+        kyNang.push(kyNangMoi); // Thêm kỹ năng mới vào mảng=
+        input.value = ""; // Xóa nội dung trong input sau khi thêm
+        hienThiKyNang(); // Cập nhật lại danh sách hiển thị 
+        console.log("Kỹ năng mới đã được thêm: " + kyNangMoi);
+    } else {
+        alert("Vui lòng nhập một kỹ năng trước khi thêm.");
+    }
+
 });
