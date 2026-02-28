@@ -1,96 +1,22 @@
 body{
-    margin: 0;
-    padding: 20 px;
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color : #333;
+    margin: 0 auto;
+    max-width: 600px;
+    padding: 20px; 
 }
 
 h1{
-    text-align:  center;
-    color: navy;
+    padding: 8px;
+    width: 100%; 
+    margin: 10px 0; 
 }
 
-ul{
-    list-style: square ;
+button:hover{
+    background-color: #45a049;
 }
 
-ol{
-    list-style: decimal;
+#loiChao{
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: green;
 }
-
-img{
-    width: 250px;
-    border-radius: 50%;
-    border: 5px solid #3498db;
-}
-
-a{
-    color: blue;
-    text-decoration: none;
-}
-
-a:hover{
-    color: red;
-    text-decoration: underline;
-}
-
-.about-container{
-    display: flex; /*Use Flexbox for layout*/
-    flex-direction: row; /*Arrange items in a row*/
-    justify-content: center; /*Center items horizontally căn giữa */ 
-    align-items: center; /*Center items vertically căn cọc giữa*/
-    gap: 40px; /*Add space between items*/
-    max-width: 900px;
-    margin: 0 auto 40px auto; /*căn giữa*/
-    flex-wrap: wrap; /*Allow items to wrap to the next line on smaller screens*/
-}
-
-.avatar-side{
-    flex: 0 0 auto; /*Don't allow the avatar to grow or shrink k co giãn*/
-}
-.avatar{
-    justify-content: center; /*Căn giữa nội dung trong avatar*/
-    margin: 40px 0x;
-    width: 200px;
-    height: 220px; 
-    border-radius: 50%;
-    border: 5px solid #3498db;
-    object-fit: cover;
-}
-
-.info-side{
-    flex: 1; /*chiem het chỗ còn lại*/
-    min-width: 300px; /*Đảm bảo phần thông tin không quá nhỏ*/
-}
-
-.avatar:hover{
-    transform: scale(1.1); /*Phóng to nhẹ khi hover*/
-    box-shadow: 0 0 20px rgba(52, 152, 219, 0.5); /*Thêm bóng mờ khi hover*/
-    transition: all 0.3s ease; /*Hiệu ứng chuyển đổi mượt mà*/
-}
-
-.skill-container{
-    display: flex;
-    flex-direction: row; /*nằm ngang*/
-    justify-content: center; /*căn giữa ngang*/
-    gap: 20px; /*khoảng cách giữa các ô*/
-    margin: 20px 0; /*khoảng cách trên dưới*/   
-    flex-wrap: wrap;
-    margin-bottom: 40px;
-
-}
-
-.skill{
-    height: 40px;
-  background-color: #3498db;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 20px;
-  font-weight: bold;
-  text-align: center;
-  min-width: 100px;
-}
-
-
-
