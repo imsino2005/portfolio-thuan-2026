@@ -3,17 +3,17 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Day 7 - Welcome Form</title>
-        <link rel="stylesheet" href="style.css">
+        <title>Ngày 8 danh sách kỹ năng động</title>
+        <link rel= "stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Welcome to My Portfolio</h1>
-        <form>
-            <label for ="ten">Your name:</label><br>
-            <input type="text" id ="ten" placeholder="Ví dụ: Minh Thuận"><br><br>
-            <button type="button" id = "gui">Submit</button>
-        </form>
-        <p id="loiChao"> Lời chào sẽ hiện ở đây</p>
+        <h1>kỹ năng của em:</h1>
+        <ul id="kyNangList">
+        </ul>
+        <input type="text" id = "kyNangInput" placeholder="Nhập kỹ năng mới">
+        <button id ="themKyNang">Thêm kỹ năng</button>
+
         <script src="script.js"></script>
     </body>
+
 </html>
