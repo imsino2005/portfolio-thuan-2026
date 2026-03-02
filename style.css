@@ -1,22 +1,39 @@
 body{
     font-family: Arial, sans-serif;
+    max-width: 500px; 
     margin: 0 auto;
-    max-width: 600px;
-    padding: 20px; 
+    padding: 20px;
+}
+h1 {
+    text-align: center;
+    color: #333;
 }
 
-h1{
-    padding: 8px;
-    width: 100%; 
-    margin: 10px 0; 
+input{
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
 }
 
-button:hover{
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
     background-color: #45a049;
 }
+#thongBao{
+    margin: 15px 0;
+    text-align: center;
+}
 
-#loiChao{
-    margin-top: 20px;
-    font-size: 1.2em;
+#thanhCong{
     color: green;
+    text-align: center;
+    margin-top: 30px;
 }

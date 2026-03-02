@@ -1,40 +1,35 @@
-let kyNang =["HTML","CSS","Flexbox"];
+let usernameInput=document.getElementById("username");
+let passwordInput=document.getElementById("password");
+let buttonDangNhap=document.getElementById("dangNhapBtn");
+let thongBao=document.getElementById("thongBao");
+let thanhCong=document.getElementById("thanhCong");
+let form=document.getElementById("dangNhapForm");
 
-let saved= localStorage.getItem("kyNang");
-if(saved){
-    kyNang=JSON.parse(saved);
-}
+const USERNAME_DUNG= "admin";
+const PASSWORD_DUNG= "123456";
 
-let danhSach = document.getElementById("kyNangList");
-let input = document.getElementById("kyNangInput");
-let buttonThem = document.getElementById("themKyNang");
+buttonDangNhap.addEventListener("click", function(event){
+    let username=usernameInput.value.trim();
+    let password=passwordInput.value.trim();
 
-function hienThiKyNang(){
-    danhSach.innerHTML = "";
-    kyNang.forEach(function(item){
-    let li = document.createElement("li");
-    li.textContent = item;
-    danhSach.appendChild(li);  
-
-    li.addEventListener("click", function(){
-        kyNang = kyNang.filter(ky => ky !== item);
-        localStorage.setItem("kyNang", JSON.stringify(kyNang));
-        hienThiKyNang();
-        console.log("Đã xoá: " + item)
-        });
-    });
-}
-
-hienThiKyNang();
-buttonThem.addEventListener("click", function(){
-    let kyNangMoi = input.value.trim();
-    if (kyNangMoi !== "") {
-        kyNang.push(kyNangMoi);
-        localStorage.setItem("kyNang", JSON.stringify(kyNang));
-        hienThiKyNang();
-        console.log("Đã thêm: " + kyNangMoi);
-        input.value = "";
-    } else {
-        alert("Vui lòng nhập kỹ năng!");
+    if(username === "" && password === ""){
+        thongBao.textContent="Vui lòng nhập tên đăng nhập và mật khẩu.";
+        thongBao.style.color="red";
+        return;
     }
+    
+    if(username === USERNAME_DUNG && password === PASSWORD_DUNG){
+        thongBao.textContent="Đăng nhập thành công!";
+        thongBao.style.color="green";
+        
+        form.style.display="none";
+        thanhCong.style.display="block";
+    } else {
+        thongBao.textContent="Tên đăng nhập hoặc mật khẩu không đúng.";
+        thongBao.style.color="red";
+    }
+
+    usernameInput.value="";
+    passwordInput.value="";
 });
+
